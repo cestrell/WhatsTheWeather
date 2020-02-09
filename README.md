@@ -1,4 +1,4 @@
-# WhatTheWeather
+# WhatsTheWeather
 What's the weather today?
 
 # Open Weather Map
