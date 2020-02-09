@@ -65,7 +65,7 @@ function init(resultFromServer) {
     weatherDescriptionHeader.innerText = resultDescription.charAt(0).toUpperCase() + resultDescription.slice(1);
 
     temperatureElement.innerHTML = Math.floor(resultFromServer.main.temp) + '&#176'
-    windSpeedElement.innerHTML = 'Winds at ' + Math.floor(resultFromServer.main.speed) + ' m/s';
+    windSpeedElement.innerHTML = 'Winds at ' + Math.floor(resultFromServer.wind.speed) + ' m/s';
     cityHeader.innerHTML = resultFromServer.name;
     humidityElement.innerHTML = 'Humidity levels at ' + Math.floor(resultFromServer.main.humidity) + '%'
 
@@ -78,7 +78,7 @@ function setPostionForWeatherInfo() {
     let weatherContainerHeight = weatherContainer.clientHeight;
     let weatherContainerWidth = weatherContainer.clientWidth;
 
-    let newTop = `calc(50% - ${weatherContainerHeight/6}px)`;
+    let newTop = `calc(50% - ${weatherContainerHeight/4}px)`;
     let newLeft = `calc(50% - ${weatherContainerWidth/2}px)`;
 
     weatherContainer.style.top = newTop;
